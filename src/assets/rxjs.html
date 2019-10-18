@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <script src="https://unpkg.com/@reactivex/rxjs@5.0.0-beta.7/dist/global/Rx.umd.js"></script>
 </head>
 <body>
-  <button></button>
-
+<input id="todo" type="text"/>
 </body>
 </html>
 
-<script src="bundle.js"></script>
+
+<script>
+    let todo = document.getElementById('todo');
+    let input$ = Rx.Observable.fromEvent(todo, 'keyup');
+    input$.subscribe(input => console.log(input.target.value));
+</script>

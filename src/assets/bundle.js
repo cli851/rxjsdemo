@@ -16781,8 +16781,13 @@ exports.WebSocketSubject = WebSocketSubject_1.WebSocketSubject;
 
 },{"../internal/observable/dom/WebSocketSubject":258,"../internal/observable/dom/webSocket":260}],446:[function(require,module,exports){
 var Rx = require('rxjs/Rx');
+
+
+
+
 var button = document.querySelector('button');
 Rx.Observable.fromEvent(button, 'click')
-  .subscribe(() => console.log('Clicked!'));
+  .scan(count => count + 1, 0)
+  .subscribe(count => console.log(`Clicked ${count} times`));
 
 },{"rxjs/Rx":232}]},{},[446]);
