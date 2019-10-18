@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -10,10 +10,3 @@
 <input id="todo" type="text"/>
 </body>
 </html>
-
-
-<script>
-    let todo = document.getElementById('todo');
-    let input$ = Rx.Observable.fromEvent(todo, 'keyup');
-    input$.subscribe(input => console.log(input.target.value));
-</script>>
