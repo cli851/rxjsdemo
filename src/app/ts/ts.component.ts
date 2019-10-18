@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild, ElementRef} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import * as Rx from 'rxjs';
 import 'rxjs-compat/add/observable/fromEvent';
 import 'rxjs-compat/add/operator/map';
@@ -11,7 +11,7 @@ import 'rxjs-compat/add/operator/map';
   styleUrls: ['./ts.component.css']
 })
 export class TsComponent implements OnInit {
-  @ViewChild('firstNameInput') todo: ElementRef;
+  
   constructor() {
 
   }
