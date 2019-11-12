@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <!--  如官网所说,在html文件head头部分导入cdn就可以使用Rx.Observable对象了!!!!!!!! -->
+  <script src="https://unpkg.com/@reactivex/rxjs@5.0.0-beta.7/dist/global/Rx.umd.js"></script>
+</head>
+
+<body>
+
+</body>
+</html>
+
+<!-- 不需要serve,直接用浏览器打开本地文件就可以了!!!! -->
+<!-- 一定要在localhost上看的话,使用http://localhost:7000/assets/rxjs.html路径,注意不加assets会有错误!! -->
+<script>
+  var foo=Rx.Observable.create(function (observer) {
+      console.log('Hello');
+      observer.next(42);
+  })
+  foo.subscribe(function (x) {
+      console.log(x);
+  })
+  foo.subscribe(function (y) {
+      console.log(y);
+  })
+</script>
